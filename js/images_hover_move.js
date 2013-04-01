@@ -51,12 +51,12 @@
                 function(){
 					var image_width = parseInt($(this).children("img").width());
 					var image_height = parseInt($(this).children("img").height());
-                    $(this).animate( {backgroundPosition: -(image_width-thumb_width) } , 1000 );
-                    $(this).parent().children("p").slideDown();
+                    $(this).stop().animate( {backgroundPosition: -(image_width-thumb_width) } , 1000 );
+                    $(this).parent().children("p").stop().slideDown();
                 },
                 function(){
-                    $(this).animate( {backgroundPosition: 0 } , 1000 );
-                    $(this).parent().children("p").slideUp();
+                    $(this).stop().animate( {backgroundPosition: 0 } , 1000 );
+                    $(this).parent().children("p").stop().slideUp();
                 }
             );
         }
